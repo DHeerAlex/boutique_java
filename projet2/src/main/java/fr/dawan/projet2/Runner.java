@@ -169,7 +169,6 @@ public class Runner implements CommandLineRunner {
 		/*Article(String nom, String description, double prix, byte[] photo, Categorie categorie, Marque marque,
 			int quantite)*/
 		
-		 //File file = new File("//C:/tmp/6mb_file.wmv");
 		 
 		Article article1 = new Article("Nintendo DS","console d'occasion Nintendo DS grise",30.0,categorie1,marque2,3);
 		articleRepo.saveAndFlush(article1);
@@ -209,7 +208,7 @@ public class Runner implements CommandLineRunner {
 		Panier panier = new Panier(user2,liste_articles1,liste_articles1.get(0).getQte(),60.0,EtatPanier.VALIDE,LocalDate.now());
 		panierRepo.saveAndFlush(panier);
 		
-		System.out.println(panierRepo.get_count_by_prix());
+		//System.out.println(panierRepo.get_count_by_prix());
 		//System.out.println(panierRepo.CalculTotal());
 		//System.out.println(panierRepo.CalculTotal2(panier.getId()));
 		
