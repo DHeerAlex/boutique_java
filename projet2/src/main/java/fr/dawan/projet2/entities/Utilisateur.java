@@ -43,10 +43,10 @@ public class Utilisateur implements Serializable {
 	
 	private int admin = 0;
 	
-	@ManyToMany(cascade = CascadeType.MERGE)
+	@ManyToMany(cascade = CascadeType.ALL)
 	private List<Adresse> adresseFacturation = new ArrayList<>();
 	
-	@ManyToMany(cascade = CascadeType.MERGE)
+	@ManyToMany(cascade = CascadeType.ALL)
 	private List<Adresse> adresseLivraison = new ArrayList<>();
 	
 	private LocalDate dateInscription;
@@ -169,6 +169,32 @@ public class Utilisateur implements Serializable {
 	public Utilisateur() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public Utilisateur(long id, String nom, String prenom, String email, String motPasse, String telephone, int admin,
+			List<Adresse> adresseFacturation, List<Adresse> adresseLivraison, LocalDate dateInscription,
+			LocalDate dateNaissance, Panier panier) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.motPasse = motPasse;
+		this.telephone = telephone;
+		this.admin = admin;
+		this.adresseFacturation = adresseFacturation;
+		this.adresseLivraison = adresseLivraison;
+		this.dateInscription = dateInscription;
+		this.dateNaissance = dateNaissance;
+		this.panier = panier;
+	}
+
+	@Override
+	public String toString() {
+		return "Utilisateur [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", motPasse="
+				+ motPasse + ", telephone=" + telephone + ", admin=" + admin + ", adresseFacturation="
+				+ adresseFacturation + ", adresseLivraison=" + adresseLivraison + ", dateInscription=" + dateInscription
+				+ ", dateNaissance=" + dateNaissance + ", panier=" + panier + "]";
 	}
 	
 	

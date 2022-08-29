@@ -75,6 +75,15 @@ public class Vente_Article implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	public Vente_Article(long id, Article article, Utilisateur user, int qte) {
+		super();
+		this.id = id;
+		this.article = article;
+		this.user = user;
+		this.qte = qte;
+	}
 	@Override
 	public String toString() {
 		return "Vente_Article [id=" + id + ", article=" + article.getNom() + ", user=" + user.getNom() + ", qte=" + qte + "]";

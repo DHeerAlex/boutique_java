@@ -4,8 +4,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -178,6 +180,28 @@ public class Article implements Serializable {
 	public Article() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public Article(long id, String nom, String description, double prix, byte[] photo, Categorie categorie,
+			Marque marque, int quantite, double promo, List<Avis_Article> avis) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.description = description;
+		this.prix = prix;
+		this.photo = photo;
+		this.categorie = categorie;
+		this.marque = marque;
+		this.quantite = quantite;
+		this.promo = promo;
+		this.avis = avis;
+	}
+
+	@Override
+	public String toString() {
+		return "Article [id=" + id + ", nom=" + nom + ", description=" + description + ", prix=" + prix + ", categorie="
+				+ categorie + ", marque=" + marque + ", quantite=" + quantite + ", promo=" + promo + ", avis=" + avis
+				+ "]";
 	}
 
 	

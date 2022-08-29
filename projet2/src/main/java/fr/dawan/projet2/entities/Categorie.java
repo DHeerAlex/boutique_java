@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -75,6 +76,18 @@ public class Categorie implements Serializable {
 	public Categorie() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public Categorie(long id, String nom, List<Article> articles) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.articles = articles;
+	}
+
+	@Override
+	public String toString() {
+		return "Categorie [id=" + id + ", nom=" + nom + ", articles=" + articles + "]";
 	}
 
 	

@@ -90,6 +90,21 @@ public class Avis_Article implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+	public Avis_Article(long id, Article article, Utilisateur user, String avis, int note) {
+		super();
+		this.id = id;
+		this.article = article;
+		this.user = user;
+		this.avis = avis;
+		this.note = note;
+	}
+
+	@Override
+	public String toString() {
+		return "Avis_Article [id=" + id + ", article=" + article + ", user=" + user + ", avis=" + avis + ", note="
+				+ note + "]";
+	}
 	
 	
 }

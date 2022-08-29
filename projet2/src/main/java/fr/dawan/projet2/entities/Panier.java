@@ -38,6 +38,7 @@ public class Panier implements Serializable {
 	private Utilisateur user;
 	
 	@OneToMany
+	@Column(name="idVenteProduit")
 	private List<Vente_Article> articles = new ArrayList<>();
 	
 	private int quantite;
@@ -139,9 +140,29 @@ public class Panier implements Serializable {
 		this.dateValidation = dateValidation;
 	}
 
+	public Panier(long id, Utilisateur user, List<Vente_Article> articles, int quantite, double total,
+			fr.dawan.projet2.enums.EtatPanier etatPanier, LocalDate dateValidation, LocalDate datePaiement) {
+		super();
+		this.id = id;
+		this.user = user;
+		this.articles = articles;
+		this.quantite = quantite;
+		this.total = total;
+		EtatPanier = etatPanier;
+		this.dateValidation = dateValidation;
+		this.datePaiement = datePaiement;
+	}
+
 	public Panier() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "Panier [id=" + id + ", user=" + user + ", articles=" + articles + ", quantite=" + quantite + ", total="
+				+ total + ", EtatPanier=" + EtatPanier + ", dateValidation=" + dateValidation + ", datePaiement="
+				+ datePaiement + "]";
 	}
 	
 	

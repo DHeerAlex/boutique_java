@@ -11,6 +11,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 import javax.persistence.Version;
+import javax.transaction.Transactional;
 
 @Entity
 @Table(name="adresse")

@@ -76,6 +76,18 @@ public class Marque implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public String toString() {
+		return "Marque [id=" + id + ", nom=" + nom + ", articles=" + articles + "]";
+	}
+
+	public Marque(long id, String nom, List<Article> articles) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.articles = articles;
+	}
 	
 	
 }

@@ -9,7 +9,8 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
 		<class>fr.dawan.projet2.entities.Article</class>
 		<class>fr.dawan.projet2.entities.Adresse</class>
 		<class>fr.dawan.projet2.entities.Categorie</class>
-		<class>fr.dawan.projet2.entities.Vente_Articles</class>
+		<class>fr.dawan.projet2.entities.Vente_Article</class>
+		<class>fr.dawan.projet2.entities.Avis_Article</class>
 		<class>fr.dawan.projet2.entities.Utilisateur</class>
 		<class>fr.dawan.projet2.entities.Marque</class>
 		<class>fr.dawan.projet2.entities.Panier</class>

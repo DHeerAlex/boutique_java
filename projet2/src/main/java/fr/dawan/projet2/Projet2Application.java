@@ -5,12 +5,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import fr.dawan.projet2.entities.Adresse;
-import fr.dawan.projet2.repository.AdresseRepo;
+import fr.dawan.projet2.repositories.AdresseRepository;
 
 @SpringBootApplication
 public class Projet2Application {
 	@Autowired
-	AdresseRepo repo;
+	AdresseRepository repo;
 	public static void main(String[] args) {
 		SpringApplication.run(Projet2Application.class, args);
 		
