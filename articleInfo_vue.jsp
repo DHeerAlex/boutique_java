@@ -30,7 +30,7 @@
 				</li>
 				<li class="list-group-item"><strong>Catégorie: </strong><c:out value="${article.categorie.nom}"/></li>	
 				<li class="list-group-item"><strong>Marque: </strong><c:out value="${article.marque.nom}"/></li>	
-				<li class="list-group-item"><strong>Photo: </strong>0624859568</li>	
+				<li class="list-group-item"><strong>Photo: </strong><img src="data:image/jpg; base64,${article.photo}"/></li>	
 				<li class="list-group-item"><strong>Avis: </strong><c:out value="${article.avis.size()}"/> avis sur cet article</li>	
 				<li class="list-group-item"><strong>Quantité: </strong><c:out value="${article.quantite}"/></li>	
 			</ul>
