@@ -35,7 +35,7 @@
 				<li class="list-group-item"><strong>Quantité: </strong><c:out value="${article.quantite}"/></li>	
 			</ul>
 			<div class="card-body">
-				<a href='<c:url value="/user/update" context="/springbootProject"/>' class="btn btn-primary mb-2">Modifier mes informations</a> 
+				<a href='<c:url value="/categories/${article.categorie.id}" context="/springbootProject/home"/>' class="btn btn-primary mb-2">Retour à la liste</a> 
 				<a href='<c:url value="/home/" context="/springbootProject"/>' class="btn btn-secondary mb-2">Retour à l'accueil</a>
 			</div>
 		</div>
